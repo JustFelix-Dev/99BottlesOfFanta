@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <button onclick="getLyrics()" style="border-radius:5px;font-size:large;" title="99 bottles of Fanta - Felix">Get
+        Lyrics</button>
+        <hr>
+     <h3 id="result" style="margin-left:450px"></h3>
+     <script>
+           // 99 bottles of Fanta
+        function getLyrics() {
+            var bottles;
+            var bottlesLeft;
+            let html = "";
+            let html1="";
+            let html2 ="";
+            for (i = 99; i >= 1; i--) {
+                if (i == 1) {
+                    bottles = "bottle";
+                    bottlesLeft = "No bottles of fanta on the wall!";
+                } else {
+                    bottles = "bottles";
+                    bottlesLeft = i - 1 + " bottles of fanta on the wall!";
+
+                }
+                html1 += `<h3>${i} ${bottles} of fanta on the wall; ${i} ${bottles} of fanta; <br> Take one down, pass it around; ${bottlesLeft} <br></h3>`
+              html2 = `<h3>No more bottles of fanta on the wall, no more bottles of fanta. <br> Go to the store and buy some more;99 bottles of fanta on the wall.</h3>`
+             
+            }
+            html = html1 + html2;
+            result.innerHTML = html;
+        }
+
+     </script>
+</body>
+
+</html>
